@@ -1,0 +1,11 @@
+---
+title: Docs Homepage
+permalink: /
+---
+
+<h2>Check out our docs</h2>
+<ul>
+  {% for page in collections.docs %}
+  <li><a href="{{ page.url | url }}">{{ page.data.title | safe }}</a> <small>(order={{ page.data.order }})</small></li>
+  {% endfor %}
+</ul>
