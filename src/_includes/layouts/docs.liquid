@@ -1,0 +1,18 @@
+---
+layout: layouts/default.liquid
+---
+
+{%- assign previousPost = collections.docs | getPreviousCollectionItem: page -%}
+{%- assign nextPost = collections.docs | getNextCollectionItem: page -%}
+
+<main data-order="{{ order }}">
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <section>{{ content | strip }}</section>
+  <nav>
+  {% if previousPost %}<a href="{{ previousPost.url }}">&laquo; {{ previousPost.data.title }}</a> |{% endif %}
+  <a href="/">Index</a>
+  {% if nextPost %}| <a href="{{ nextPost.url }}">{{ nextPost.data.title }} &raquo;</a>{% endif %}
+  </nav>
+</main>

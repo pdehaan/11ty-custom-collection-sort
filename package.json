@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "eleventy",
+    "dev": "npm run build && npx prettier 'www/**/*.html' --write",
+    "serve": "npm run build -- --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
   "license": "MPL-2.0",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.11.0-beta.1"
   }
 }

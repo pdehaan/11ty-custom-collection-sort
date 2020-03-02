@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
       });
     return docs;
   });
-  
+
   return {
     dir: {
       input: "src",
